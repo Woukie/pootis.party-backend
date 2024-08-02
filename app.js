@@ -9,6 +9,7 @@ var urlFixerMiddleware = require("./middleware/urlfixer");
 
 var indexRouter = require("./routes/index");
 var endpointsRouter = require("./routes/endpoints");
+var listenRouter = require("./routes/listen");
 
 var app = express();
 express.Router({ strict: true });
@@ -28,6 +29,7 @@ app.use(urlFixerMiddleware);
 
 app.use("/", indexRouter);
 app.use("/endpoints", endpointsRouter);
+app.use("/listen", listenRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
