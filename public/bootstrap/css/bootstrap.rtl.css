@@ -196,7 +196,7 @@
 
 @font-face {
   font-family: "DOS";
-  src: url("../fonts/Px437_IBM_EGA8.otf") format("opentype");
+  src: url("../font/AcPlus_IBM_EGA_8x8.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-kerning: none;
