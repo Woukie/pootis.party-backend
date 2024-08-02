@@ -15,10 +15,8 @@ html(data-bs-theme="dark")
               a(class="nav-link active" aria-current="page" href="/") Root
             li(class="nav-item")
               a(class="nav-link" href="/endpoints") Endpoints
-    div(class='container')
-      div(class="card")
-        nav(style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb")
-          ol(class="breadcrumb")
+        nav(style="--bs-breadcrumb-divider: '>';")
+          ol(class="breadcrumb text-center")
             #{url = '/'}
 
             li(class="breadcrumb-item")
@@ -27,6 +25,9 @@ html(data-bs-theme="dark")
             each crumb, index in breadcrumbs
               li(class="breadcrumb-item")
                 a(href=url += crumb + '/')=crumb
+    
+    div(class='container')
+      div(class="")
       div(class="card")
         block content
       script(src="/bootstrap/js/bootstrap.bundle.js")
