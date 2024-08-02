@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  p Here are all the endpoints this api exposes 
+  table(class="table")
+    thead
+      tr
+        th(scope="col") Endpoint
+        th(scope="col") Get
+        th(scope="col") Post
+        th(scope="col") Socket
+    tbody
+      tr
+        th(scope="row") /listen
+        td data stream thing
+        td -
+        td -
+      tr
+        th(scope="row") /vote
+        td -
+        td vote for thing
+        td -
+      tr
+        th(scope="row") /submit
+        td -
+        td -
+        td -
+      tr
+        th(scope="row") /vote_pool
+        td get votes
+        td -
+        td listen to the vote pool
