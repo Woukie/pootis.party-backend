@@ -1,7 +1,7 @@
 doctype html
 html(data-bs-theme="dark")
   head
-    title= title
+    title= `Pootis Party API`
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
   body
     nav(class="navbar navbar-expand bg-body-tertiary")
@@ -25,9 +25,8 @@ html(data-bs-theme="dark")
             each crumb, index in breadcrumbs
               li(class="breadcrumb-item")
                 a(href=url += crumb + '/')=crumb
+    hr(class="mt-0")
     
     div(class='container')
-      div(class="")
-      div(class="card")
-        block content
+      block content
       script(src="/bootstrap/js/bootstrap.bundle.js")

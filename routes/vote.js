@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET vote page. */
 router.get("/", function (req, res, next) {
-  res.render("vote", {});
+  res.render("vote", { title: "Vote" });
 });
 
 module.exports = router;

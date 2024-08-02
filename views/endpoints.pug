@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  p Here are all the endpoints this api exposes 
+  p A list of all endpoints
+
   table(class="table")
     thead
       tr
@@ -11,7 +12,8 @@ block content
         th(scope="col") Socket
     tbody
       tr
-        th(scope="row") /listen
+        th(scope="row")
+          a(href="/listen") /listen
         td data stream thing
         td -
         td -
