@@ -4,21 +4,28 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+var metadataMiddleware = require("./middleware/metadata");
+var urlFixerMiddleware = require("./middleware/urlfixer");
+
 var indexRouter = require("./routes/index");
 var voteRouter = require("./routes/vote");
 var submitRouter = require("./routes/submit");
 
 var app = express();
+express.Router({ strict: true });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "jade");
+app.set("view engine", "pug");
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(metadataMiddleware);
+app.use(urlFixerMiddleware);
 
 app.use("/", indexRouter);
 app.use("/vote", voteRouter);
